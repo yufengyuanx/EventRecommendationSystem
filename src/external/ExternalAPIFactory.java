@@ -12,7 +12,8 @@ public class ExternalAPIFactory {
 			// return new YelpAPI();
 			return null; 
 		case "job":
-			// return new LinkedInAPI(); return null;
+			// return new LinkedInAPI(); 
+			return null;
 		case "new":
 			// return new NewYorkTimesAPI();
 			return null;

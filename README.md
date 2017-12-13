@@ -69,6 +69,30 @@ Recommendation based on geo distance and similar categories.
 
 Query database.
 
+#### TicketMasterAPI
+
+sample result
+
+````JSON
+	{
+		  "country": "United States Of America",
+		  "address": "99 Grove Street",
+		  "item_id": "G5vYZfMfT3Ifc",
+		  "city": "San Francisco",
+		  "latitude": 37.778479,
+		  "rating": 0,
+		  "description": "All ages welcome. 8 ticket limit per household includes tickets purchased during presale and during on sale. All tickets for this show are general admission, standing on floor level or seated upstairs on a first come, first serve basis.",
+		  "url": "http://www.ticketmaster.com/khalid-the-roxy-tour-san-francisco-california-05-05-2018/event/1C0053753F4A852D",
+		  "zipcode": "94102",
+		  "name": "Khalid: The Roxy Tour",
+		  "state": "California",
+		  "categories": [
+		    "Music"
+		  ],
+		  "longitude": -122.417473
+	}
+````
+
 ### Frontend
 
 
