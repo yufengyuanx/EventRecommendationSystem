@@ -14,7 +14,6 @@ public class DBConnectionFactory {
 			return MySQLConnection.getInstance();
 		case "mongodb":
 			return MongoDBConnection.getInstance();
-		// You may try other dbs and add them here.
 		default:
 			throw new IllegalArgumentException("Invalid db " + db);
 		}

@@ -52,7 +52,7 @@ public class MySQLConnection implements DBConnection{
 			}
 		}
 	}
-
+	
 	@Override
 	public void setFavoriteItems(String userId, List<String> itemIds) {
 		if (conn == null) {
