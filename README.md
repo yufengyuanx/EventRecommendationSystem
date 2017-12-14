@@ -1,6 +1,8 @@
 # EventRecommendationSystem
-[Demo](http://www.yufengyuanx.com/Nearby)
+[Demo](http://www.yufengyuanx.com/event)
+
 sample username: 1111
+
 sample password: 2222
 
 ## Objective
