@@ -39,6 +39,23 @@ ul {
     text-decoration: none;
 }
 
+/* id="welcome-msg" */
+span[id="welcome-msg"] {
+    color: #F9F9F9;
+    font-weight: 400;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+/* id="logout-link" */
+
+a[id="logout-link"] {
+    color: #F9F9F9;
+    font-weight: 400;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
 
 .container {
     top: 60px;
@@ -77,45 +94,44 @@ ul {
 
 
 #login-form {
-	
+    
     border-radius: 5px;
-    background-color: #cdc3bd;
     padding: 20px;
     margin: 8px 0;
 }
 
 
-input{
+input {
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
-
 
 label {
     width: 10%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 8px 10%;
     display: inline-block;
     color: black;
 }
 
-button[id=login-btn], button[id=register-btn] {
+
+button {
     width: 50%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 100px;
-    border: none;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    cursor: pointer;
+    box-sizing: border-box; 
+    background-color: green;
 }
 
-button[id=login-btn]:hover {
+button:hover {
     background-color: #45a049;
 }
 
