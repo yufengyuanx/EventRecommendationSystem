@@ -138,11 +138,6 @@ public class MySQLTableCreation {
 
 			System.out.println("Executing query:\n" + sql);
 			stmt.executeUpdate(sql);
-			
-			sql = "INSERT INTO users " + "VALUES (\"2222\", \"331813e554ebac9113407c9232ecc999\", \"John\", \"Smith\")";
-
-			System.out.println("Executing query:\n" + sql);
-			stmt.executeUpdate(sql);
 
 			System.out.println("Import is done successfully.");
 			

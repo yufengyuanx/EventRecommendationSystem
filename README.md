@@ -42,6 +42,9 @@ EventRecommendationSystem
 |         	   |----Login.java
 |         	   |----Logout.java
 |         	   |----RpcHelper.java
+|         |----offline
+|         	   |----Purify.java
+|         	   |----FindPeak.java
 |----WebContent
 |    |----scripts
 |         |----main.js
@@ -55,6 +58,25 @@ EventRecommendationSystem
 ### Backend
 
 #### Database structure
+
+##### MySQL
+````
+items (item_id, name, city, state, country, zipcode, rating, address, latitude, longitude, description, snippet, snippet_url, image_url, url)
+
+categories (item_id, category)
+
+users (user_id, password, first_name, last_name)
+
+history (history_id, user_id, item_id, last_favor_time)
+````
+
+##### MongoDB
+````
+users (firstname, lastname, password, user_id, favorite)
+
+items (item_id, name, city, state, country, zipcode, rating, address, 
+       latitude, longitude, description, snippet, snippet_url, image_url, url, categories)
+````
 
 #### SearchItem
 
@@ -95,8 +117,27 @@ sample result
 	}
 ````
 
+#### ELK
+
+-> Logstash (get log information) 
+ 
+-> ElasticSearch (analysis in-time log information)  
+
+->  Kibana (visualization)
+
+
+#### Offline Log Analysis
+````
+MongoDB.collection.mapreduce(map, reduce)
+````
+
 ### Frontend
 
 
 ### Test
+
+Junit4
+
+JMeter
+
 

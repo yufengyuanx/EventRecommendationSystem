@@ -106,7 +106,7 @@ public class MongoDBConnection implements DBConnection {
 
 
 	@Override
-	public Set<String> getCategories(String itemId) {//Student Question
+	public Set<String> getCategories(String itemId) {
 		Set<String> categories = new HashSet<>();
 		FindIterable<Document> iterable = db.getCollection("items").find(eq("item_id", itemId));
 
