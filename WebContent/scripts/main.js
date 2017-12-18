@@ -260,7 +260,7 @@
 		xhr.onload = function() {
 			switch (xhr.status) {
 			case 200:
-				callback(xhr.responseText);
+				callback(xhr.responseText);  
 				break;
 			case 403:
 				onSessionInvalid();
@@ -407,8 +407,8 @@
 		ajax(method, url, req,
 		// successful callback
 		function(res) {
-			var result = JSON.parse(res);
-			if (result.status === 'OK') {
+			var result = JSON.parse(res); //  result.status === undefined?  result =  {"result":"SUCCESS"}
+			if (result.result === 'SUCCESS') {
 				li.dataset.favorite = favorite;
 				favIcon.className = favorite ? 'fa fa-heart' : 'fa fa-heart-o';
 			}

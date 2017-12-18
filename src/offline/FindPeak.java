@@ -100,6 +100,7 @@ public class FindPeak{
 	}
 
     // Use LocalTime.isAfter/isBefore to compare to objects
+	// Use binary search
 	private static String findBucket(String currentTime) {
 		LocalTime curr = LocalTime.parse(currentTime);
 		int left = 0, right = buckets.size() - 1;

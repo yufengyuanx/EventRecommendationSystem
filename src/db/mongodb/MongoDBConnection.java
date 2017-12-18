@@ -169,6 +169,12 @@ public class MongoDBConnection implements DBConnection {
 	@Override
 	public boolean verifyLogin(String userId, String password) {
 		// TODO Auto-generated method stub
+		FindIterable<Document> iterable = db.getCollection("users").find(eq("user_id", userId));
+		if (iterable.first().containsKey("password")) {
+			if (password.equals(iterable.first().get("password"))) {
+				return true;
+			}
+		}
 		return false;
 	}
 }
