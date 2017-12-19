@@ -35,6 +35,9 @@ EventRecommendationSystem
 |         |----external.ticketmaster
 |         	   |----GeoHash.java
 |         	   |----TicketMasterAPI.java
+|         |----external.yelp
+|         	   |----TwoStepOAuth.java
+|         	   |----YelpAPI.java
 |         |----rpc
 |         	   |----SearchItem.java
 |         	   |----RecommendItem.java
@@ -116,8 +119,9 @@ sample result
 		  "longitude": -122.417473
 	}
 ````
+###Log
 
-#### ELK
+#### Online Log Analysis - ELK
 
 -> Logstash (get log information) 
  
@@ -126,18 +130,40 @@ sample result
 ->  Kibana (visualization)
 
 
-#### Offline Log Analysis
+#### Offline Log Analysis - MongoDB
 ````
 MongoDB.collection.mapreduce(map, reduce)
 ````
 
 ### Frontend
 
+**Ajax**
 
 ### Test
 
-Junit4
+**Junit4**
 
-JMeter
+Unit Test
+
+**JMeter**
+
+500 Thread Http request for search
+
+Throughput 29.8/sec
+
+
+200 Thread http request for search
+````
+Caused by: java.io.IOException: Server returned HTTP response code: 429 for URL: http://app.ticketmaster.com/discovery/v2/events.json?
+apikey=Mv73AUlSvrG7LkJ8j5MGKAOpWWMdiqU2&geoPoint=9q9k&keyword=&radius=50
+	at 
+	sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1840)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at external.ticketmaster.TicketMasterAPI.search(TicketMasterAPI.java:46)
+	... 26 more
+java.io.IOException: Server returned HTTP response code: 429 for URL: http://app.ticketmaster.com/discovery/v2/events.json?apikey=Mv73AUlSvrG7LkJ8j5MGKAOpWWMdiqU2&geoPoint=9q9k&keyword=&radius=50
+````
+
 
 

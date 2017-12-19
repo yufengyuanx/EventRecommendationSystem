@@ -21,7 +21,8 @@ public class TicketMasterAPI implements ExternalAPI {
 	private static final String API_HOST = "app.ticketmaster.com";
 	private static final String SEARCH_PATH = "/discovery/v2/events.json";
 	private static final String DEFAULT_TERM = "";  // no restriction
-	private static final String API_KEY = "Mv73AUlSvrG7LkJ8j5MGKAOpWWMdiqU2";
+	private static final String API_KEY = "GzrrBVR2WH6f9HVAUyYdeGutl0gLN7Uc";
+//	private static final String API_KEY = "Mv73AUlSvrG7LkJ8j5MGKAOpWWMdiqU2";
 	
 	@Override
 	public List<Item> search(double lat, double lon, String term) {

@@ -43,7 +43,7 @@ public class SearchItem extends HttpServlet {
 	 */
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-    			// allow access only if session exists
+//    			 allow access only if session exists
     		HttpSession session = request.getSession();
     		if (session.getAttribute("user") == null) {
     			response.setStatus(403);
